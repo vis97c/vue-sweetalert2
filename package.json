@@ -7,6 +7,7 @@
     "scripts": {
         "test": "jest --no-cache",
         "test:watch": "jest --watch",
+        "build": "bili --bundle-node-modules",
         "prepublish": "tsc -p ."
     },
     "husky": {
@@ -47,11 +48,15 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
+        "bili": "^4.8.1",
         "eslint": "^6.0.1",
         "eslint-plugin-vue": "^5.2.3",
         "husky": "^3.0.0",
         "jest": "^24.8.0",
         "require-hacker": "^3.0.1",
+        "rollup-plugin-commonjs": "^10.0.1",
+        "rollup-plugin-typescript2": "^0.22.0",
+        "rollup-plugin-vue": "^5.0.1",
         "ts-jest": "^24.0.2",
         "tslint": "^5.18.0",
         "typescript": "^3.5.3",
@@ -60,7 +65,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "nodemonConfig": {
-        "watch": ["src"],
+        "watch": [
+            "src"
+        ],
         "exec": "npm run prepublish",
         "delay": 2500
     }
